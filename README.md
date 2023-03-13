@@ -66,3 +66,9 @@ fastapi-scheduler
 apscheduler
 fastapi_amis_admin
 ```
+
+## 4. Run
+```bash
+uvicorn main:app --reload --port 13579
+```
+view http://localhost:13579/admin for administration of baskground tasks page.
