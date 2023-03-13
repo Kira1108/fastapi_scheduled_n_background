@@ -1,0 +1,8 @@
+fastapi==0.90.1
+uvicorn
+python-multipart
+fastapi-scheduler
+apscheduler
+fastapi_amis_admin
+aiosqlite
+
