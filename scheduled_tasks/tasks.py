@@ -3,10 +3,11 @@ from fastapi_scheduler import SchedulerAdmin
 from fastapi_amis_admin.admin.settings import Settings
 from fastapi_amis_admin.admin.site import AdminSite
 
-site = AdminSite(settings=Settings(database_url_async='sqlite+aiosqlite:///amisadmin.db'))
+site = AdminSite(settings=Settings(database_url='sqlite:///amisadmin.db'))
 
 scheduler = SchedulerAdmin.bind(site)
 
+# Every 60 seconds, run the task
 @scheduler.scheduled_job('interval', seconds=60)
 def interval_task_test():
     print('interval task is run...')
